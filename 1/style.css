@@ -25,35 +25,55 @@
   transform: translate(-50%, -50%);
 }
 
+.one_hundred {
+  position: relative;
+  top: 0;
+  width: 200px;
+  height: 100px;
+}
 .one_hundred .one_short {
-  width: 20px;
+  position: absolute;
+  top: 3px;
+  left: -20px;
+  width: 30px;
   height: 40px;
+  background: #fff;
   border-radius: 5px;
   transform: rotate(45deg);
-  color: #fff;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
 }
 .one_hundred .one_long {
-  width: 20px;
-  height: 100px;
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 30px;
+  height: 110px;
   border-radius: 5px;
-  color: #fff;
+  background: #fff;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
 }
-.one_hundred .zero {
-  width: 100px;
-  height: 100px;
+.one_hundred .zero_one,
+.one_hundred .zero_two {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 60px;
+  height: 60px;
+  border: 24px solid #fff;
   border-radius: 50%;
-  color: #fff;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
 }
-
-.zero .circle {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  border-radius: 50%;
-  color: rgba(0, 0, 0, 0);
+.one_hundred .zero_one {
+  z-index: 2;
+}
+.one_hundred .zero_two {
+  left: 100px;
 }
 
 p {
+  position: absolute;
+  top: 0;
   width: fit-content;
   margin: 0;
   font-weight: 700;
@@ -61,13 +81,15 @@ p {
 }
 
 .days {
+  position: relative;
   transform: scaleY(1.2);
   font-size: 70px;
   letter-spacing: 2px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .css_challenge {
+  position: relative;
   transform: scaleY(1.1);
   font-size: 22px;
 }
